@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #e8f4fd, #dbeeff, #eaf1ff);
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    color: #0d2b4e;
+}
+
+body::before {
+    content: '📝 My Wish List';
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1565c0;
+    margin-bottom: 32px;
+    letter-spacing: 0.5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 460px;
+    background: #ffffff;
+    padding: 28px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(21, 101, 192, 0.12);
+    border: 1.5px solid #bbdefb;
+    margin-bottom: 32px;
+}
+
+label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1565c0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="text"] {
+    padding: 12px 16px;
+    border: 1.5px solid #90caf9;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+    background: #f0f8ff;
+    color: #0d2b4e;
+    font-weight: 600;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]::placeholder {
+    color: #90aec8;
+    font-weight: 400;
+}
+
+input[type="text"]:focus {
+    border-color: #1565c0;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.12);
+}
+
+#saveValue {
+    padding: 13px;
+    background: #1565c0;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#saveValue:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+#saveValue:active {
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1565c0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+#searchValue, #search {
+    width: 100%;
+    padding: 11px 16px 11px 40px;
+    border: 1.5px solid #90caf9;
+    border-radius: 12px;
+    font-size: 0.97rem;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+    background: #f0f8ff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2390aec8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat 14px center;
+    color: #0d2b4e;
+    font-weight: 600;
+    margin-bottom: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#searchValue::placeholder, #search::placeholder {
+    color: #90aec8;
+    font-weight: 400;
+}
+
+#searchValue:focus, #search:focus {
+    border-color: #1565c0;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.12);
+}
+
+.output-box > button {
+    width: 100%;
+    padding: 11px 22px;
+    background: #1565c0;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.output-box > button:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+.output-box > button:active {
+    transform: translateY(0);
+}
+
+.output-box {
+    width: 100%;
+    max-width: 460px;
+    background: #ffffff;
+    padding: 28px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(21, 101, 192, 0.12);
+    border: 1.5px solid #bbdefb;
+    margin-bottom: 32px;
+}
+
+#allValues {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#allValues ul {
+    list-style: none;
+}
+
+#allValues ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 15px 18px;
+    border-radius: 14px;
+    border: 1.5px solid #bbdefb;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0d2b4e;
+    box-shadow: 0 4px 14px rgba(21, 101, 192, 0.08);
+    animation: popIn 0.25s ease;
+}
+
+.btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+#allValues ul li button:first-child {
+    padding: 6px 14px;
+    background: transparent;
+    color: #1565c0;
+    border: 1.5px solid #1565c0;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+#allValues ul li button:first-child:hover {
+    background: #1565c0;
+    color: #fff;
+}
+
+#allValues ul li button {
+    padding: 6px 14px;
+    background: transparent;
+    color: #e53935;
+    border: 1.5px solid #e53935;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+#allValues ul li button:hover {
+    background: #e53935;
+    color: #fff;
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.97) translateY(6px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
